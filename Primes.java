@@ -9,7 +9,7 @@ public class Primes {
     numarr[0]=false;
     numarr[1]=false;
 
-    for (int i = 2; i < maxnumber ; i++) {  
+    for (int i = 2; i <numarr.length ; i++) {  
          numarr[i] = true;
     }
     
@@ -28,15 +28,17 @@ public class Primes {
         p_num++;
     }
 
-
+    System.out.println("Prime numbers up to " + maxnumber + ":");
     for (int j = 2; j < numarr.length; j++) {
         if (numarr[j]== true) {
-            count_p++;   
+            count_p++; 
+            System.out.println(j);
+  
         } 
     }
+
         int per = (int)(((double)count_p/maxnumber)*100);
-        System.out.println(" ");
         System.out.print("There are" +" "+ count_p +" "+ "primes between 2 and" + " " + maxnumber + " (" + per + "% are primes)");
-    
+        
     }
 }
